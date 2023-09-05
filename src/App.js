@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import { CartWidget } from './components/CartWidget';
+import navbar from './components/Navbar/navbar'
+
 
 function App() {
   return(
-
-    <CartWidget></CartWidget>
+    <>
+      <navbar/>
+    </>
 )
 }
 

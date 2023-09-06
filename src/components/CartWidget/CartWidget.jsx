@@ -1,8 +1,13 @@
+import carro from '../../imgs/carro.png';
+import './CartWidget.css'
 
 
-export const CartWidget = () =>{
+const CartWidget = () =>{
     return (
-<h1></h1>
+        <>
+        <img src={carro} className='carroImg' alt='carrito de compras con lista de productos seleccionados'></img>
+        <span>(3)</span>
+        </>
     )
 }
 

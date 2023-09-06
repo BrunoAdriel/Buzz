@@ -1,11 +1,14 @@
 import './App.css';
-import navbar from './components/Navbar/navbar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Navbar from './components/Navbar/Navbar'
 
 
 function App() {
+  const greeting="¡¡Bienvenidos a Buzz!!🚀"
   return(
     <>
-      <navbar/>
+      <Navbar/>
+      <ItemListContainer greeting={greeting} />
     </>
 )
 }

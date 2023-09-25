@@ -2,7 +2,7 @@
     "id": 1,
     "name": "Jordan 3",
     "price": 12000,
-    "img": "IMAGEN.jpg",
+    "img": "../imgs/jorda3Retro.jpg",
     "marca": "Nike"
 },{
     "id": 2, 

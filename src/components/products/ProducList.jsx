@@ -9,23 +9,19 @@ const ProductList = () => {
     if(loading) return (<div className="spinner-border text-secondary" role="status"></div>)
 
     return(
-        <div className="container"> 
+        <div> 
             <h1 className="display-1">Nuestros Productos</h1>
-            <div className="container text-center">
-                <div className="row">
-                    <div className="col"> 
+
                     {
-                        data.map((prod) => {
+                        data.map((product) => {
                             return(
-                                <ProductDetail key={prod.id} prod={prod}>
+                                <ProductDetail key={product.id} product={product}>
 
                                 </ProductDetail>
                             )
                         })
                         }
-                    </div>
-                </div>
-            </div>
+
         </div>
     )
 }

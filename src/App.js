@@ -1,6 +1,9 @@
 import './App.css';
+import Categorias from './components/Categorias/categorias';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Navbar from './components/Navbar/Navbar'
+import ProductList from './components/products/ProducList';
+
 
 
 function App() {
@@ -9,6 +12,8 @@ function App() {
     <>
       <Navbar/>
       <ItemListContainer greeting={greeting} />
+      <Categorias />
+<ProductList/>
     </>
 )
 }

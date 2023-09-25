@@ -1,0 +1,31 @@
+[{
+    "id": 1,
+    "name": "Jordan 3",
+    "price": 12000,
+    "img": "IMAGEN.jpg",
+    "marca": "Nike"
+},{
+    "id": 2, 
+    "name": "Vans",
+    "price": 10000,
+    "img": "IMAGEN.jpg",
+    "marca": "Vans"
+},{
+    "id": 3,
+    "name": "Yezze",
+    "price": 20000,
+    "img": "IMAGEN.jpg",
+    "marca": "Adidas"
+},{
+    "id": 4,
+    "name": "Vapormax",
+    "price": 20000,
+    "img": "IMAGEN.jpg",
+    "talle": "Nike"
+},{
+    "id": 5,
+    "name": "AirForce 1",
+    "price": 17000,
+    "img": "IMAGEN.jpg",
+    "talle": "Nike"
+}]

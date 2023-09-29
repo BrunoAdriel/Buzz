@@ -2,6 +2,8 @@ import UseAsynMock from "../Hook/UseAsyncMock";
 import ProductDetail from "../products/ProductDetail";
 import productos from "../Mocks/Products.json"
 
+
+
 const ProductList = () => {
 
     const {data, loading} = UseAsynMock(productos)
@@ -16,7 +18,6 @@ const ProductList = () => {
                         data.map((product) => {
                             return(
                                 <ProductDetail key={product.id} product={product}>
-
                                 </ProductDetail>
                             )
                         })

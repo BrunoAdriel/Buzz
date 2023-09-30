@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function ProdSelec() {
     const [mostrarProducto, setMostraarProduct] = useState(false);
 
@@ -14,9 +15,7 @@ function ProdSelec() {
 
             {mostrarProducto && (
                 <div>
-                    <h2>Producto Específico</h2>
-                    <p>Descripción del producto...</p>
-                    <img src="imagen-del-producto.jpg" alt="Producto" />
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vero.</p>
                 </div>
             )}
         </div>

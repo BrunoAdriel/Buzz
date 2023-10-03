@@ -11,10 +11,10 @@ function ProdSelec() {
 
     return (
         <div>
-            <button onClick={mostrar}>Mostrar Producto</button>
+            <button className="btn btn-secondary" onClick={mostrar}>Mostrar Producto</button>
 
             {mostrarProducto && (
-                <div>
+                    <div class="container text-center">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vero.</p>
                 </div>
             )}

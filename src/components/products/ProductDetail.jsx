@@ -12,11 +12,10 @@ const ProductDetail = ({product, children})=>{
 
     return(
         //Formato de la carta
-
-
-        <div className="row row-cols-1 row-cols-md-2 g-4">
+        <div className="container text-center">
+        <div className="row">
             <div className="col">
-                <div className="card">
+                <div className="card" style={{width: '25rem'}}>
                     <img src={img} className="card-img-top" alt={name}/>
                     <div className="card-body">
                         <h5 className="card-title">{marca}  {name}</h5>
@@ -28,6 +27,7 @@ const ProductDetail = ({product, children})=>{
                 </div>
             </div>
         </div>
+    </div>
     );
 }
 

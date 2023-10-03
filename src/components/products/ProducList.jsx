@@ -12,7 +12,7 @@ const ProductList = () => {
 
     return(
         <div> 
-            <h1 className="display-1">Nuestros Productos</h1>
+            <h1>Nuestros Productos</h1>
 
                     {
                         data.map((product) => {

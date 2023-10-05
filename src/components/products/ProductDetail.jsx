@@ -1,5 +1,7 @@
+import ItemDetailContainer from "../Categorias/ItemDetailContainer";
 import ProdSelec  from "../Categorias/prodSelecc";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 
 
 
@@ -8,6 +10,8 @@ const ProductDetail = ({product, children})=>{
 
 
     const {id, name, price, img, marca} = product
+
+    const {idProd} = useParams();
 
 
     return(
@@ -21,9 +25,9 @@ const ProductDetail = ({product, children})=>{
                         <h5 className="card-title">{marca}  {name}</h5>
                         <p className="card-text">$: {price}</p>
                     </div>
-                    <Link to={`/Producto/${id}`}>
-                    <ProdSelec></ProdSelec >
-                    </Link>
+                <Link to={"/Productos/:idProd"} idProd={idProd}>
+                    <button className="btn btn-secondary">Mostrar Producto</button>
+                </Link>
                 </div>
             </div>
         </div>

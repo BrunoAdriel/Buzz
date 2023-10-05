@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 function ProdSelec() {
     const [mostrarProducto, setMostraarProduct] = useState(false);
 
@@ -11,13 +10,12 @@ function ProdSelec() {
 
     return (
         <div>
-            <button className="btn btn-secondary" onClick={mostrar}>Mostrar Producto</button>
 
-            {mostrarProducto && (
-                    <div class="container text-center">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vero.</p>
-                </div>
-            )}
+                {mostrarProducto && (
+                        <div class="container text-center">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vero.</p>
+                    </div>
+                )}
         </div>
 );
 }

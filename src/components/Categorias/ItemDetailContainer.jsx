@@ -1,26 +1,27 @@
-import productos from "../Mocks/Products.json"
+import { useParams } from "react-router-dom";
+import UseAsynMock from "../Hook/UseAsyncMock";
+import productos from "../Mocks/Products.json";
 import ProdSelec from "./prodSelecc";
 
-
-const ItemDetailContainer = () =>{
+const ItemDetailContainer = () => {
     
-    const idToFilter = [];
+    const {idProd} = useParams();
+    const {data, loading} = UseAsynMock(productos);
+    
+    if(loading) return (<div className="spinner-border text-secondary" role="status"></div>)
 
-    // Filtrar elementos JSX por su ID
-    const filteredItems = productos
-    .filter(item => item.id === idToFilter)
-    .map(filteredItem => (
-        <div key={filteredItem.id}>
-        </div>
-));
+    const categorySelected = data.filter((item) =>item.id === idProd);
 
-    return(
-
-        <div>
-            <ProdSelec>{filteredItems}</ProdSelec>
+    return (
+        <div className="container">{
+            categorySelected.map((product)=>{
+                return <ProdSelec key={product.id} product={product}/>
+            })
+            }
         </div>
     )
 }
 
-export default ItemDetailContainer;
 
+
+export default ItemDetailContainer

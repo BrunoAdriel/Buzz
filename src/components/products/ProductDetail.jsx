@@ -26,13 +26,13 @@ const ProductDetail = ({product, children})=>{
         <>
         {/* Formato de la carta */}
     <div className="container text-center" onClick={handleClick}>
-        <div className="row">
-            <div className="col">
-                <div className="card" style={{width: '25rem'}}>
+        <div className="row" >
+            <div className="col" >
+                <div className="card" style={{width: '25rem'}} >
                     <img src={img} className="card-img-top" alt={name}/>
-                    <div className="card-body">
+                    <div className="card-body" >
                         <h5 className="card-title">{marca}  {name}</h5>
-                        <p className="card-text">$: {price}</p>
+                        <p className="card-text">$ {price}</p>
                     </div>
                 {/* <Link to={"/Productos/:idProd"} idProd={idProd}>
                     <button className="btn btn-secondary">Mostrar Producto</button>
@@ -42,7 +42,7 @@ const ProductDetail = ({product, children})=>{
         </div>
     </div>
     {
-        isSelected && <ProductoInfo product={product} open={isSelected} setOpen={setItSelected}/>
+        isSelected && (<> <ProductoInfo product={product} open={isSelected} setOpen={setItSelected}/> </>)
     }
     </>
     );

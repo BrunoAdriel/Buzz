@@ -1,10 +1,20 @@
+import { useCartContext } from "../Context/CartContext"
+
 const ProductoInfo = ({ product, open, setOpen }) =>{
     
-    const {img, marca, name, price} = product
+    const {id, img, marca, name, price,} = product
+
+    const { addToCart } = useCartContext()
 
     const handleClose = ( ) =>{
         setOpen(prev => !prev)
     }
+
+    const handleAddToCart = (count) =>{
+        if (count > 0){ 
+            addToCart({id, img, marca, name, price, quantity: count}) }
+    }
+
 
     return(<>
     <div className={`modal ${open ? 'show' : ''}`} tabIndex="-1" style={{ display: open ? 'block' : 'none' }}>
@@ -20,7 +30,7 @@ const ProductoInfo = ({ product, open, setOpen }) =>{
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleClose}>Close</button>
-                        <button type="button" className="btn btn-primary">Mas Info</button>
+                        <button type="button" className="btn btn-primary" onClick={handleAddToCart}>Comprar</button>
                     </div>
                 </div>
             </div>

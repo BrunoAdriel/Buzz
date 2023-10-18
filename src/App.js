@@ -6,6 +6,8 @@ import Navbar from './components/Navbar/Navbar'
 import ProductList from './components/products/ProducList';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/Categorias/ItemDetailContainer'
+import CartProvider from './components/Context/CartContext';
+import Cart from './components/Cart/Cart';
 
 
 
@@ -13,6 +15,7 @@ function App() {
   const greeting="¡¡Bienvenidos a Buzz!!🚀"
   return(
     <>
+    <CartProvider>
       <Router>
         <Navbar/>
         <Routes>
@@ -21,10 +24,12 @@ function App() {
           <Route exact path='/' element={<Categorias/>}></Route>
           <Route exact path='/Productos' element={<ProductList/>}></Route>
           <Route exact path='/Categoria/:categoryId' element={<CategoriaProducto/>}></Route>
+          <Route exact path='/Cart' element={<Cart/>}></Route>
           <Route exact path='/Producto/:idProd' element={<ItemDetailContainer/>}></Route>
 
         </Routes>
       </Router>
+      </CartProvider>
     </>
 )
 }

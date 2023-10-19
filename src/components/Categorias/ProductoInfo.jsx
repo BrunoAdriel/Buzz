@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useCartContext } from "../Context/CartContext"
 
 const ProductoInfo = ({ product, open, setOpen }) =>{
@@ -5,12 +6,14 @@ const ProductoInfo = ({ product, open, setOpen }) =>{
     const {id, img, marca, name, price,} = product
 
     const { addToCart } = useCartContext()
+    const [quantityInCart, setQuantityInCart ] = useState(0)
 
     const handleClose = ( ) =>{
         setOpen(prev => !prev)
     }
 
     const handleAddToCart = (count) =>{
+        setQuantityInCart(count);
         if (count > 0){ 
             addToCart({id, img, marca, name, price, quantity: count}) }
     }

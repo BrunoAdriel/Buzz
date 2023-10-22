@@ -12,6 +12,8 @@ const ProductoInfo = ({ product, open, setOpen }) =>{
         setOpen(prev => !prev)
     }
 
+    const { addCart } = addToCart()
+
     const handleAddToCart = (count) =>{
         setQuantityInCart(count);
         if (count > 0){ 
@@ -33,7 +35,7 @@ const ProductoInfo = ({ product, open, setOpen }) =>{
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleClose}>Close</button>
-                        <button type="button" className="btn btn-primary" onClick={handleAddToCart}>Comprar</button>
+                        <button type="button" className="btn btn-primary" onClick={addCart}>Comprar</button>
                     </div>
                 </div>
             </div>

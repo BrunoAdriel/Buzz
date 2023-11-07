@@ -5,13 +5,13 @@ import './CartWidget.css'
 
 const CartWidget = () =>{
     
-    const { cart } = useCartContext;
+    const { cart } = useCartContext();
     
     return (
         <>
             <div style={{display: "flex", alignItems: "center"}}>
                 <img src={carro} className='carroImg' alt='carrito de compras con lista de productos seleccionados'></img>
-                {/* <h3>{cart.items.length}</h3> */}
+                <h3>{cart.items.length}</h3>
             </div>
         </>
     )

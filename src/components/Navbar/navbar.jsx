@@ -23,10 +23,10 @@ const Navbar = () =>{
                     </li>
                 </Link>
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">Lo nuevo</a>
+                    <a className="nav-link" aria-current="page">Lo nuevo</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">Ingreso</a>
+                    <a className="nav-link" aria-current="page">Ingreso</a>
                 </li>
                 </ul>
                 <form className="d-flex" role="search">
@@ -35,7 +35,9 @@ const Navbar = () =>{
                 </form>
             </div>
         </div>
-        <CartWidget/>
+        <Link to="/Cart">
+            <CartWidget/>
+        </Link>
     </nav>
     );
 }
